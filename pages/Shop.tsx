@@ -67,8 +67,8 @@ export const Shop = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-serif font-bold text-gray-900">Shop Collection</h1>
-          <p className="text-gray-500 mt-1">Found {filteredProducts.length} items</p>
+          <h1 className="text-3xl font-serif font-bold text-gray-900 drop-shadow-sm">Shop Collection</h1>
+          <p className="text-gray-600 mt-1 font-medium">Found {filteredProducts.length} items</p>
         </div>
         
         <div className="relative w-full md:w-64">
@@ -77,7 +77,7 @@ export const Shop = () => {
             placeholder="Search flowers..." 
             value={searchQuery}
             onChange={handleSearchChange}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500"
+            className="w-full pl-10 pr-4 py-2 border border-pink-200 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-500 focus:border-primary-500 bg-white/80 backdrop-blur-sm"
           />
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
         </div>
@@ -86,7 +86,7 @@ export const Shop = () => {
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Filters Sidebar */}
         <div className="w-full lg:w-64 flex-shrink-0">
-          <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm sticky top-24">
+          <div className="bg-white/80 backdrop-blur-md p-6 rounded-lg border border-pink-100 shadow-sm sticky top-24">
             <div className="flex items-center space-x-2 mb-4">
               <SlidersHorizontal className="h-5 w-5 text-gray-500" />
               <h3 className="font-semibold text-gray-900">Categories</h3>
@@ -99,7 +99,7 @@ export const Shop = () => {
                   className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
                     activeCategory === cat 
                       ? 'bg-primary-50 text-primary-700 font-medium' 
-                      : 'text-gray-600 hover:bg-gray-50'
+                      : 'text-gray-600 hover:bg-white/50'
                   }`}
                 >
                   {cat}
@@ -114,13 +114,13 @@ export const Shop = () => {
           {loading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse">
               {[1,2,3,4,5,6].map(i => (
-                <div key={i} className="h-80 bg-gray-200 rounded-lg"></div>
+                <div key={i} className="h-80 bg-white/50 rounded-lg"></div>
               ))}
             </div>
           ) : filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProducts.map(product => (
-                <div key={product.id} className="group bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+                <div key={product.id} className="group bg-white/80 backdrop-blur-sm border border-pink-100 rounded-lg shadow-sm hover:shadow-lg hover:bg-white/95 transition-all duration-300 flex flex-col overflow-hidden">
                   <div className="relative aspect-w-1 aspect-h-1 h-64 overflow-hidden bg-gray-100">
                     <img
                       src={product.image}
@@ -157,7 +157,7 @@ export const Shop = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-20 bg-gray-50 rounded-lg">
+            <div className="text-center py-20 bg-white/60 backdrop-blur-sm rounded-lg border border-pink-100">
               <h3 className="text-lg font-medium text-gray-900">No products found</h3>
               <p className="text-gray-500 mt-2">Try adjusting your search or filter.</p>
               <button onClick={() => { setSearchParams({}); }} className="mt-4 text-primary-600 hover:underline">Clear all filters</button>

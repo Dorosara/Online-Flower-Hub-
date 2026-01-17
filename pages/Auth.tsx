@@ -29,7 +29,7 @@ export const Login = () => {
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg border border-gray-100">
+      <div className="max-w-md w-full space-y-8 bg-white/90 backdrop-blur-md p-10 rounded-xl shadow-lg border border-pink-100">
         <div className="text-center">
           <h2 className="mt-6 text-3xl font-serif font-bold text-gray-900">Welcome Back</h2>
           <p className="mt-2 text-sm text-gray-600">Sign in to your account</p>
@@ -39,11 +39,11 @@ export const Login = () => {
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">Email address</label>
-              <input type="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500" value={email} onChange={e => setEmail(e.target.value)} />
+              <input type="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/90" value={email} onChange={e => setEmail(e.target.value)} />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Password</label>
-              <input type="password" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500" value={password} onChange={e => setPassword(e.target.value)} />
+              <input type="password" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/90" value={password} onChange={e => setPassword(e.target.value)} />
             </div>
           </div>
           <div>
@@ -81,7 +81,7 @@ export const Signup = () => {
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg border border-gray-100">
+      <div className="max-w-md w-full space-y-8 bg-white/90 backdrop-blur-md p-10 rounded-xl shadow-lg border border-pink-100">
         <div className="text-center">
           <h2 className="mt-6 text-3xl font-serif font-bold text-gray-900">Create Account</h2>
           <p className="mt-2 text-sm text-gray-600">Join FlowerHub today</p>
@@ -90,15 +90,15 @@ export const Signup = () => {
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700">Full Name</label>
-              <input type="text" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500" value={name} onChange={e => setName(e.target.value)} />
+              <input type="text" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/90" value={name} onChange={e => setName(e.target.value)} />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Email address</label>
-              <input type="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500" value={email} onChange={e => setEmail(e.target.value)} />
+              <input type="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/90" value={email} onChange={e => setEmail(e.target.value)} />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Password</label>
-              <input type="password" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500" value={password} onChange={e => setPassword(e.target.value)} />
+              <input type="password" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/90" value={password} onChange={e => setPassword(e.target.value)} />
             </div>
           </div>
           <div>

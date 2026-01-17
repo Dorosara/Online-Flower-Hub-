@@ -27,8 +27,8 @@ const Layout = ({ children }: { children?: React.ReactNode }) => (
   <div className="flex flex-col min-h-screen relative">
     <FlowerBackground />
     <Navbar />
-    {/* Removed bg-white to let background show, added min-h for full coverage */}
-    <main className="flex-grow bg-white/50 backdrop-blur-sm z-0">
+    {/* Removed bg-white/50 overlay to allow flowers to be vibrant. Page components manage their own transparency. */}
+    <main className="flex-grow z-0">
       {children}
     </main>
     <Footer />

@@ -20,12 +20,12 @@ export const Dashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
-        <h1 className="text-3xl font-serif font-bold text-gray-900">My Account</h1>
-        <p className="text-gray-500 mt-2">Welcome back, {user.name}!</p>
+        <h1 className="text-3xl font-serif font-bold text-gray-900 drop-shadow-sm">My Account</h1>
+        <p className="text-gray-600 mt-2 font-medium">Welcome back, {user.name}!</p>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-100 bg-gray-50">
+      <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-sm border border-pink-100 overflow-hidden">
+        <div className="px-6 py-4 border-b border-gray-100 bg-white/50">
           <h2 className="text-lg font-medium text-gray-900">Order History</h2>
         </div>
         
@@ -37,7 +37,7 @@ export const Dashboard = () => {
         ) : (
           <div className="divide-y divide-gray-100">
             {orders.map((order) => (
-              <div key={order.id} className="p-6">
+              <div key={order.id} className="p-6 hover:bg-white/40 transition-colors">
                 <div className="flex flex-col sm:flex-row justify-between mb-4">
                   <div className="flex items-center mb-2 sm:mb-0">
                     <div className="mr-4">

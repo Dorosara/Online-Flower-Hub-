@@ -50,15 +50,15 @@ export const Profile = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8 text-center">
-        <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-primary-100 text-primary-600 mb-4">
+        <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-white/80 backdrop-blur-sm text-primary-600 mb-4 shadow-sm border border-pink-100">
           <UserCircle className="h-10 w-10" />
         </div>
-        <h1 className="text-3xl font-serif font-bold text-gray-900">My Profile</h1>
-        <p className="text-gray-500 mt-2">Manage your account settings</p>
+        <h1 className="text-3xl font-serif font-bold text-gray-900 drop-shadow-sm">My Profile</h1>
+        <p className="text-gray-600 mt-2 font-medium">Manage your account settings</p>
       </div>
 
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-100 bg-gray-50">
+      <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-sm border border-pink-100 overflow-hidden">
+        <div className="px-6 py-4 border-b border-gray-100 bg-white/50">
           <h2 className="text-lg font-medium text-gray-900">Personal Information</h2>
         </div>
         
@@ -77,7 +77,7 @@ export const Profile = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/80"
                   required
                 />
               </div>
@@ -96,7 +96,7 @@ export const Profile = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500 bg-white/80"
                   required
                 />
               </div>
@@ -107,7 +107,7 @@ export const Profile = () => {
           </div>
 
           <div className="flex items-center justify-end border-t border-gray-100 pt-6">
-             <Button type="submit" isLoading={loading} className="flex items-center">
+             <Button type="submit" isLoading={loading} className="flex items-center shadow-sm">
                <Save className="h-4 w-4 mr-2" /> Save Changes
              </Button>
           </div>
